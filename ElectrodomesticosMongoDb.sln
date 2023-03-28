@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElectrodomesticosMongoDb", "ElectrodomesticosMongoDb\ElectrodomesticosMongoDb.csproj", "{216FD9D4-83EE-48FF-8AF8-37915AB1E015}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{09CB2EBC-51FF-4753-9419-8C2D7A98EA6A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{AA0B979B-858C-4F16-936F-98D1D90A290A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dominio", "Dominio", "{6F3385B0-9046-4485-B5DF-611FF65814A6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructura", "Infrastructura", "{CFBA26E6-E864-43EF-85F7-07E65136A501}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dominio.Entitadas", "Dominio.Entitadas\Dominio.Entitadas.csproj", "{B0FD8E81-3176-4FB4-AE21-2908AE94D560}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dominio.CasosdeUso", "Dominio.CasosdeUso\Dominio.CasosdeUso.csproj", "{A5A382AE-CAA0-4A12-9B05-75928866E0C0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{216FD9D4-83EE-48FF-8AF8-37915AB1E015}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{216FD9D4-83EE-48FF-8AF8-37915AB1E015}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{216FD9D4-83EE-48FF-8AF8-37915AB1E015}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{216FD9D4-83EE-48FF-8AF8-37915AB1E015}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0FD8E81-3176-4FB4-AE21-2908AE94D560}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0FD8E81-3176-4FB4-AE21-2908AE94D560}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0FD8E81-3176-4FB4-AE21-2908AE94D560}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0FD8E81-3176-4FB4-AE21-2908AE94D560}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5A382AE-CAA0-4A12-9B05-75928866E0C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5A382AE-CAA0-4A12-9B05-75928866E0C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5A382AE-CAA0-4A12-9B05-75928866E0C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5A382AE-CAA0-4A12-9B05-75928866E0C0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{216FD9D4-83EE-48FF-8AF8-37915AB1E015} = {AA0B979B-858C-4F16-936F-98D1D90A290A}
+		{AA0B979B-858C-4F16-936F-98D1D90A290A} = {09CB2EBC-51FF-4753-9419-8C2D7A98EA6A}
+		{6F3385B0-9046-4485-B5DF-611FF65814A6} = {09CB2EBC-51FF-4753-9419-8C2D7A98EA6A}
+		{CFBA26E6-E864-43EF-85F7-07E65136A501} = {09CB2EBC-51FF-4753-9419-8C2D7A98EA6A}
+		{B0FD8E81-3176-4FB4-AE21-2908AE94D560} = {6F3385B0-9046-4485-B5DF-611FF65814A6}
+		{A5A382AE-CAA0-4A12-9B05-75928866E0C0} = {6F3385B0-9046-4485-B5DF-611FF65814A6}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {63D10129-A20F-4017-9459-57CA23BB631B}
+	EndGlobalSection
+EndGlobal
