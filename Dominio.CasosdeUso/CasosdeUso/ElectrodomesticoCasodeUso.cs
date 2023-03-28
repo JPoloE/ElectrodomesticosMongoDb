@@ -29,7 +29,7 @@ namespace Dominio.CasosdeUso.CasosdeUso
             return await _electrodomesticoRepositorio.UpdateElectrodomesticoAsync(electrodomesticos);
         }
 
-        public async Task<Electrodomesticos> EliminarElectrodomesticoPorId(int id)
+        public async Task<string> EliminarElectrodomesticoPorId(string id)
         {
             return await _electrodomesticoRepositorio.DeleteElectrodomesticoByIdAsync(id);
         }

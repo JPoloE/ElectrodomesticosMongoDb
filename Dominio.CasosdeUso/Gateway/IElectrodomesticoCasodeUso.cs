@@ -16,7 +16,7 @@ namespace Dominio.CasosdeUso.Gateway
 
         Task<Electrodomesticos> ObtenerElectrodomesticoPorId(int id);
         
-        Task<Electrodomesticos> EliminarElectrodomesticoPorId(int id);
+        Task<string> EliminarElectrodomesticoPorId(string id);
 
         Task<Electrodomesticos> EditarElectrodomestico(Electrodomesticos electrodomesticos);
     }

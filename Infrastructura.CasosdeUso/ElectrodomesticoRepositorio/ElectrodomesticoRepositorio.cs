@@ -8,6 +8,7 @@ using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -24,10 +25,20 @@ namespace Infrastructura.CasosdeUso.ElectrodomesticoRepositorio
             _mapper = mapper;
         }
 
-        public Task<Electrodomesticos> DeleteElectrodomesticoByIdAsync(int id)
+        public async Task<string> DeleteElectrodomesticoByIdAsync(string id)
         {
-            throw new NotImplementedException();
+            var electrodomesticos = await coleccion.DeleteOneAsync(x => x.Id_Mongo == id);
+            if (electrodomesticos.DeletedCount.Equals(1))
+            {
+                return $"Electrodomestico con Id_Mongo: {id} eliminado correctamente";
+            }
+            else
+            {
+                return $"Electrodomestico con Id_Mongo: {id} no encontrado";
+            }
         }
+    
+    
 
         public async Task<List<Electrodomesticos>> GetAllElectrodomesticosAsync()
         {
@@ -36,7 +47,7 @@ namespace Infrastructura.CasosdeUso.ElectrodomesticoRepositorio
             return listaElectrodomesticos;
         }
 
-        public Task<Electrodomesticos> GetElectrodomesticoByIdAsync(int id)
+        public async Task<Electrodomesticos> GetElectrodomesticoByIdAsync(int id)
         {
             throw new NotImplementedException();
         }
@@ -48,9 +59,13 @@ namespace Infrastructura.CasosdeUso.ElectrodomesticoRepositorio
             return electrodomesticos;
         }
 
-        public Task<Electrodomesticos> UpdateElectrodomesticoAsync(Electrodomesticos electrodomesticos)
+        public async Task<Electrodomesticos> UpdateElectrodomesticoAsync(Electrodomesticos electrodomesticos)
         {
-            throw new NotImplementedException();
+            var actualizarElectrodomestico = _mapper.Map<ElectrodomesticoEntidad>(electrodomesticos);
+            var actualizaElectrodomestico = await coleccion.FindOneAndReplaceAsync(electrodomesticoEntidad => electrodomesticoEntidad.Id_Mongo 
+            == electrodomesticos.Id_Mongo, actualizarElectrodomestico);
+            return electrodomesticos;
+
         }
     }
 }

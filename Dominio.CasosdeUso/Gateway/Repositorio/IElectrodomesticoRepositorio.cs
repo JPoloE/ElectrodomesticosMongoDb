@@ -16,7 +16,7 @@ namespace Dominio.CasosdeUso.Gateway.Repositorio
 
         Task<Electrodomesticos> GetElectrodomesticoByIdAsync(int id);
        
-        Task<Electrodomesticos> DeleteElectrodomesticoByIdAsync(int id);
+        Task<string> DeleteElectrodomesticoByIdAsync(string id);
        
         Task<Electrodomesticos> UpdateElectrodomesticoAsync(Electrodomesticos electrodomesticos);
     }

@@ -8,7 +8,7 @@ namespace Dominio.Entitadas.Entidades
 {
     public class Electrodomesticos
     {
-        public int Id { get; set; }
+        public string Id_Mongo { get; set; }
         public string Nombre_Electrodomestico { get; set; }
         public string Marca { get; set; }
         public string Modelo { get; set; }

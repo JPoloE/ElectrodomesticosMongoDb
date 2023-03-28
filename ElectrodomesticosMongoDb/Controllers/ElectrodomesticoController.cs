@@ -30,5 +30,19 @@ namespace ElectrodomesticosMongoDb.Controllers
         {
             return await _electrodomesticoCasodeUso.AgregarElectrodomestico(_mapper.Map<Electrodomesticos>(electodomestico));
         }
+
+        [HttpPut]
+        public async Task<Electrodomesticos> Actualizar_Electrodomestico(Electrodomesticos electodomestico)
+        {
+            return await _electrodomesticoCasodeUso.EditarElectrodomestico(_mapper.Map<Electrodomesticos>(electodomestico));
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<string> Eliminar_Electrodomestico(string id)
+        {
+            return await _electrodomesticoCasodeUso.EliminarElectrodomesticoPorId(id);
+        }
+
+
     }
 }
